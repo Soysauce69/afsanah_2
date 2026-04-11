@@ -1,0 +1,141 @@
+
+
+.about-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 252, 245, 0.98),
+    rgba(255, 243, 226, 0.96)
+  );
+  border-radius: 30px;
+  padding: 2.8rem 2.6rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(236, 211, 182, 0.95);
+  text-align: left;
+}
+
+.about-wrap .lady {
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-wrap .lady img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  object-fit: cover;
+}
+
+.about-title {
+  font-size: 1.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.about-tagline {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.6rem;
+}
+
+.about-text {
+  font-size: 0.96rem;
+  color: var(--deep-brown);
+}
+
+.about-text p + p {
+  margin-top: 0.9rem;
+}
+
+.about-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.6rem;
+}
+
+.about-pill {
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  border: 1px dashed rgba(196, 106, 61, 0.7);
+  font-size: 0.78rem;
+  color: var(--accent-terracotta-dark);
+}
+
+
+
+.artisan-gallery {
+  margin-top: 4rem;
+  padding: 0 1.5rem;
+}
+
+.gallery-title {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--deep-brown);
+}
+
+.artisan-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.artisan-card {
+  background: var(--card-cream);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-soft);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+}
+
+.artisan-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform var(--transition-fast);
+}
+
+.artisan-info {
+  padding: 1.2rem 1.3rem;
+  text-align: center;
+}
+
+.artisan-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: var(--deep-brown);
+}
+
+.artisan-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.artisan-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(75, 54, 37, 0.25);
+}
+
+.artisan-card:hover img {
+  transform: scale(1.05);
+}
+
+
+
+@media (max-width: 900px) {
+  .artisan-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+}
+
+@media (max-width: 640px) {
+  .about-wrap   { padding: 2rem 1.6rem; border-radius: 22px; }
+  .artisan-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+}
