@@ -1,12 +1,7 @@
-// ================================================================
-//  Afsanah 2.0 — script.js
-//  Runs on: index.html, about.html, contact.html
-//  Handles: contact form validation
-// ================================================================
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  // ── Contact form validation ────────────────────────────────
   const contactForm = document.getElementById("contact-form");
 
   if (contactForm) {
@@ -32,4 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+});
+
+let lastScroll = 0;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+
+  if (currentScroll <= 0) {
+    header.classList.remove("hide");
+    return;
+  }
+
+  if (currentScroll > lastScroll && currentScroll > 80) {
+    header.classList.add("hide"); // scroll down
+  } else {
+    header.classList.remove("hide"); // scroll up
+  }
+
+  lastScroll = currentScroll;
 });
