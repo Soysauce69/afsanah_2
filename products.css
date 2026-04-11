@@ -45,7 +45,7 @@
   border: 1px solid var(--border-soft);
 
   position:relative;
-  top: 70px; 
+  top: 5px; 
   z-index: 10;
 }
 
