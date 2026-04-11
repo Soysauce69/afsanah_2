@@ -6,6 +6,10 @@
   margin-bottom: 2rem;
   padding-top: 1rem;
 }
+.page-header {
+  position: relative; 
+  z-index: 1;
+}
 
 .page-kicker {
   font-size: 0.82rem;
@@ -40,25 +44,23 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-soft);
 
-  position: sticky;
+  position:relative;
   top: 70px; 
   z-index: 10;
 }
 
 @media (max-width: 768px) {
   .controls-bar {
-    flex-direction: column;
+    position: relative; 
+    top: unset;
   }
+}
+.controls-bar {
+  transition: box-shadow 0.2s ease;
+}
 
-  .selects-row {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .ctrl-select {
-    flex: 1;
-    min-width: 120px;
-  }
+.controls-bar.sticky-active {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
 
