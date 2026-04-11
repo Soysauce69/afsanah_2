@@ -59,18 +59,24 @@ main .container {
 }
 
 
-
 header {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 50;
+
   background: linear-gradient(
     to right,
-    rgba(196, 106, 61, 0.95),
-    rgba(75, 54, 37, 0.96)
+    rgba(196, 106, 61, 0.92),
+    rgba(75, 54, 37, 0.94)
   );
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 20px rgba(32, 21, 15, 0.22);
+
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(32, 21, 15, 0.15);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+header.hide {
+  transform: translateY(-100%);
 }
 
 .nav {
