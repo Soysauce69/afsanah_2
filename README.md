@@ -1,17 +1,17 @@
 # afsanah_2.O
-Afsanah 2.0 is a modern React-based e-commerce platform that goes beyond conventional online shopping by integrating culture, storytelling, and technology.
+Afsanah 2.0 is a modern  e-commerce platform that goes beyond conventional online shopping by integrating culture, storytelling, and technology.
 
 The platform is designed to showcase traditional Indian products while preserving and presenting the stories, heritage, and craftsmanship behind each item. By combining dynamic API-driven data with an intuitive UI, Afsanah aims to create a meaningful and immersive user experience.
 Key Features:
 Product Listing
 Displays a curated collection of traditional items
-Dynamically rendered using React components
+
 Story Behind the Product
 Each item includes:
 Origin
 Cultural significance
-Craft history
-Data fetched via APIs or mock backend
+
+Data fetched via APIs 
  Region-Based Exploration:
 Filter products by:
 State / region (e.g., Rajasthan, Kashmir, Gujarat)

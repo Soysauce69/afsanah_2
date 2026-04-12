@@ -1,6 +1,4 @@
-// ================================================================
-// Afsanah 2.0 — FINAL STABLE VERSION (IMAGES FIXED)
-// ================================================================
+
 
 const WIKI_SUMMARY = "https://en.wikipedia.org/api/rest_v1/page/summary";
 
@@ -14,9 +12,7 @@ const state = {
   }
 };
 
-// ================================================================
-// INITIAL DATA
-// ================================================================
+
 
 function fetchProducts() {
   showLoading();
@@ -44,7 +40,7 @@ function fetchProducts() {
     category: getCategory(name),
     price: randomPrice(),
     region: randomRegion(),
-    image: getImage(), // ✅ FIXED IMAGE
+    image: getImage(), 
     description: "Authentic handmade Indian craft.",
     rating: (Math.random() * 1 + 4).toFixed(1),
     in_stock: true,
@@ -55,17 +51,12 @@ function fetchProducts() {
   applyAndRender();
 }
 
-// ================================================================
-// IMAGE FIX (NO BROKEN LINKS)
-// ================================================================
 
 function getImage() {
   return "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?auto=format&fit=crop&w=300&q=80";
 }
 
-// ================================================================
-// SEARCH
-// ================================================================
+
 
 function searchProducts(products) {
   const query = state.filters.search.trim().toLowerCase();
@@ -84,9 +75,7 @@ function searchProducts(products) {
   return [];
 }
 
-// ================================================================
-// WIKIPEDIA SEARCH
-// ================================================================
+
 
 async function fetchSearchResults(query) {
   showLoading();
@@ -134,9 +123,7 @@ async function fetchSearchResults(query) {
   }
 }
 
-// ================================================================
-// PIPELINE
-// ================================================================
+
 
 function applyAndRender() {
   const result = sortProducts(
@@ -169,9 +156,6 @@ function sortProducts(products) {
   return copy.sort(map[state.filters.sort]);
 }
 
-// ================================================================
-// RENDER
-// ================================================================
 
 function renderProducts(products) {
   const grid = document.getElementById("product-grid");
@@ -195,9 +179,7 @@ function renderProducts(products) {
   `).join("");
 }
 
-// ================================================================
-// MODAL
-// ================================================================
+
 
 async function openModal(id) {
   const p = state.allProducts.find(x => x.id === id);
@@ -224,9 +206,6 @@ function closeModal() {
   document.getElementById("product-modal").classList.remove("open");
 }
 
-// ================================================================
-// UTIL
-// ================================================================
 
 function randomPrice() {
   return Math.floor(Math.random() * 4000 + 500);
@@ -271,9 +250,6 @@ function debounce(fn, delay=300) {
   };
 }
 
-// ================================================================
-// FILTER UI
-// ================================================================
 
 function populateFilters() {
   const cats = ["All", ...new Set(state.allProducts.map(p => p.category))];
@@ -286,9 +262,7 @@ function populateFilters() {
     regs.map(r=>`<option>${r}</option>`).join("");
 }
 
-// ================================================================
-// EVENTS
-// ================================================================
+
 
 document.addEventListener("DOMContentLoaded", () => {
 

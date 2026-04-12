@@ -719,7 +719,7 @@
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* Wikipedia extract text */
+
 .wiki-extract { font-size: 0.88rem; line-height: 1.8; color: var(--deep-brown); }
 .wiki-unavailable { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem; font-style: italic; }
 

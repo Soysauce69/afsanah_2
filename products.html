@@ -12,7 +12,7 @@
   </head>
   <body>
 
-    <!-- ── HEADER (your original design) ── -->
+  
     <header>
       <div class="nav">
         <a href="index.html" class="logo">
@@ -25,7 +25,7 @@
           <a href="about.html">About</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <!-- Favourites counter pill -->
+      
         <button class="fav-nav-pill" id="fav-nav-pill" aria-label="Favourites">
           ♥ <span id="fav-count"></span>
         </button>
@@ -35,7 +35,7 @@
     <main>
       <section class="container">
 
-        <!-- ── PAGE HEADER ── -->
+ 
         <header class="page-header">
           <p class="page-kicker">Curated by Afsanah 2.0</p>
           <h1 class="page-title">Handmade pieces from across India</h1>
@@ -45,10 +45,10 @@
           </p>
         </header>
 
-        <!-- ── CONTROLS BAR ── -->
+      
         <div class="controls-bar">
 
-          <!-- Search -->
+        
           <div class="search-wrap">
             <span class="search-icon" aria-hidden="true">🔍</span>
             <input
@@ -61,7 +61,7 @@
             />
           </div>
 
-          <!-- Selects row -->
+       
           <div class="selects-row">
 
             <select id="filter-category" class="ctrl-select" aria-label="Filter by category">
@@ -81,7 +81,7 @@
           </div>
         </div>
 
-        <!-- Result count + error -->
+
         <div class="result-bar">
           <span id="result-count" class="result-count"></span>
         </div>
@@ -91,13 +91,13 @@
           <button onclick="fetchProducts()">↺ Retry</button>
         </div>
 
-        <!-- ── PRODUCT GRID (populated by JS) ── -->
+        
         <section id="product-grid" class="product-grid" role="list"></section>
 
       </section>
     </main>
 
-    <!-- ── MODAL ── -->
+
     <div id="product-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-name">
       <div class="modal-card">
 
@@ -105,13 +105,13 @@
 
         <div class="modal-layout">
 
-          <!-- Image side -->
+          
           <div class="modal-img-col">
             <img id="modal-img" src="" alt="" class="modal-product-img" />
             <span id="modal-badge" class="modal-badge"></span>
           </div>
 
-          <!-- Detail side -->
+
           <div class="modal-detail-col">
             <div class="modal-meta-row">
               <span id="modal-category" class="modal-category-tag"></span>
@@ -136,7 +136,7 @@
       </div>
     </div>
 
-    <!-- ── FOOTER (your original design) ── -->
+   
     <footer>
       <div class="container">
         <p>© 2025 <span>Afsanah</span>. Each product supports Indian artisan livelihoods.</p>
